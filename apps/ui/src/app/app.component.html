@@ -1,0 +1,23 @@
+<mat-card>
+  <div class="file-input">
+    <mat-label>File</mat-label>
+    <button mat-raised-button (click)="fileInput.click()">
+      {{ file?.name || 'Select' }}
+    </button>
+    <input
+      hidden
+      type="file"
+      #fileInput
+      (change)="onFileInput(fileInput.files)"
+    />
+    <button [disabled]="!file" type="submit" mat-raised-button color="primary" (click)="onSubmit()">
+      Submit
+    </button>
+  </div>
+  <mat-progress-bar
+    *ngIf="upload$ | async as download"
+    [mode]="download.state == 'PENDING' ? 'buffer' : 'determinate'"
+    [value]="download.progress"
+  >
+  </mat-progress-bar>
+</mat-card>

@@ -1,0 +1,27 @@
+:host {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  min-height: 3rem;
+}
+
+.file-input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+mat-label,
+button {
+  margin: 0.5rem;
+}
+
+button[type='submit'] {
+  margin-left: auto;
+}
