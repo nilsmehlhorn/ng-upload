@@ -5,7 +5,7 @@
   "scripts": {
     "nx": "nx",
     "start": "npm run start:api & npm run start:ui",
-    "start:ui": "nx serve ui",
+    "start:ui": "nx serve ui --host 0.0.0.0 --disable-host-check",
     "start:api": "nx serve api",
     "build": "nx build",
     "test": "nx test",
