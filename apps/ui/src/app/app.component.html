@@ -2,7 +2,7 @@
   <div class="file-input">
     <mat-label>File</mat-label>
     <button mat-raised-button (click)="fileInput.click()">
-      {{ file?.name || 'Select' }}
+      {{ file ? file.name : 'Select' }}
     </button>
     <input
       hidden

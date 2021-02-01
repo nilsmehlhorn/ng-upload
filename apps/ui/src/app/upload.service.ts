@@ -14,7 +14,6 @@ export class UploadService {
       .post('/api/upload', data, {
         reportProgress: true,
         observe: 'events',
-        responseType: 'blob',
       })
       .pipe(upload());
   }
